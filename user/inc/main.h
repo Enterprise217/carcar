@@ -18,12 +18,12 @@
 #define MOTOR1_PWM (PWM2_MODULE0_CHA_C6)
 #define MOTOR1_DIR (C7)
 // 左电机前进需要的DIR脚的电平 (GPIO_HIGH or GPIO_LOW) 请自行测试
-#define MOTOR1_FORWARD_DIR_LEVEL (GPIO_HIGH)
+#define MOTOR1_FORWARD_DIR_LEVEL (GPIO_LOW)
 // 右轮电机
 #define MOTOR2_PWM (PWM2_MODULE1_CHA_C8)
 #define MOTOR2_DIR (C9)
 // 右电机前进需要的DIR脚的电平 (GPIO_HIGH or GPIO_LOW) 请自行测试
-#define MOTOR2_FORWARD_DIR_LEVEL (GPIO_HIGH)
+#define MOTOR2_FORWARD_DIR_LEVEL (GPIO_LOW)
 
 
 // 舵机参数设置

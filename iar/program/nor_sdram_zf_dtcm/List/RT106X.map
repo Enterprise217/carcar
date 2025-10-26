@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.40.1.364/W64 for ARM                  26/Oct/2025  18:11:43
+# IAR ELF Linker V9.40.1.364/W64 for ARM                  26/Oct/2025  21:15:26
 # Copyright 2007-2023 IAR Systems AB.
 #
 #    Output file  =
@@ -258,8 +258,8 @@ No sections matched the following patterns:
 
   Section              Kind         Address      Size  Object
   -------              ----         -------      ----  ------
-"P3-P5|P9", part 1 of 2:                        0x10d
-  P3-P5|P9 s0                   0x2000'0000     0x10d  <Init block>
+"P3-P5|P9", part 1 of 2:                        0x111
+  P3-P5|P9 s0                   0x2000'0000     0x111  <Init block>
     .data              inited   0x2000'0000      0x2c  zf_driver_gpio.o [9]
     .data              inited   0x2000'002c      0x28  zf_device_mt9v03x.o [8]
     .data              inited   0x2000'0054      0x24  zf_device_mt9v03x.o [8]
@@ -271,27 +271,28 @@ No sections matched the following patterns:
     .data              inited   0x2000'00dc       0x4  pid.o [6]
     .data              inited   0x2000'00e0       0x4  pid.o [6]
     .data              inited   0x2000'00e4       0x4  pid.o [6]
-    .data              inited   0x2000'00e8       0x4  system_MIMXRT1064.o [4]
-    .data              inited   0x2000'00ec       0x4  zf_common_clock.o [7]
-    .data              inited   0x2000'00f0       0x4  zf_device_type.o [8]
+    .data              inited   0x2000'00e8       0x4  pid.o [6]
+    .data              inited   0x2000'00ec       0x4  system_MIMXRT1064.o [4]
+    .data              inited   0x2000'00f0       0x4  zf_common_clock.o [7]
     .data              inited   0x2000'00f4       0x4  zf_device_type.o [8]
     .data              inited   0x2000'00f8       0x4  zf_device_type.o [8]
     .data              inited   0x2000'00fc       0x4  zf_device_type.o [8]
-    .data              inited   0x2000'0100       0x4  zf_driver_flash.o [9]
-    .data              inited   0x2000'0104       0x2  zf_device_tft180.o [8]
-    .data              inited   0x2000'0106       0x2  zf_device_tft180.o [8]
-    .data              inited   0x2000'0108       0x1  zf_common_debug.o [7]
-    .data              inited   0x2000'0109       0x1  zf_device_mt9v03x.o [8]
-    .data              inited   0x2000'010a       0x1  zf_device_tft180.o [8]
-    .data              inited   0x2000'010b       0x1  zf_device_tft180.o [8]
-    .data              inited   0x2000'010c       0x1  zf_device_tft180.o [8]
-                              - 0x2000'010d     0x10d
+    .data              inited   0x2000'0100       0x4  zf_device_type.o [8]
+    .data              inited   0x2000'0104       0x4  zf_driver_flash.o [9]
+    .data              inited   0x2000'0108       0x2  zf_device_tft180.o [8]
+    .data              inited   0x2000'010a       0x2  zf_device_tft180.o [8]
+    .data              inited   0x2000'010c       0x1  zf_common_debug.o [7]
+    .data              inited   0x2000'010d       0x1  zf_device_mt9v03x.o [8]
+    .data              inited   0x2000'010e       0x1  zf_device_tft180.o [8]
+    .data              inited   0x2000'010f       0x1  zf_device_tft180.o [8]
+    .data              inited   0x2000'0110       0x1  zf_device_tft180.o [8]
+                              - 0x2000'0111     0x111
 
-"P3-P5|P9", part 2 of 2:                     0x1'117c
-  DTCM_VAR                      0x2000'0140    0xb090  <Block>
+"P3-P5|P9", part 2 of 2:                     0x1'1170
+  DTCM_VAR                      0x2000'0140    0xb088  <Block>
     NonCacheable       zero     0x2000'0140    0x5820  zf_device_mt9v03x.o [8]
     NonCacheable       zero     0x2000'5980    0x5820  zf_device_mt9v03x.o [8]
-  ZI                            0x2000'b1a0    0x60ec  <Block>
+  ZI                            0x2000'b1a0    0x60e8  <Block>
     .bss               zero     0x2000'b1a0       0x4  fsl_clock.o [5]
     .bss               zero     0x2000'b1a4       0x4  fsl_clock.o [5]
     .bss               zero     0x2000'b1a8       0x4  fsl_csi.o [5]
@@ -335,36 +336,35 @@ No sections matched the following patterns:
     .bss               zero     0x2001'0eec       0x4  pid.o [6]
     .bss               zero     0x2001'0ef0       0x4  pid.o [6]
     .bss               zero     0x2001'0ef4       0x4  pid.o [6]
-    .bss               zero     0x2001'0ef8       0x4  pid.o [6]
-    .bss               zero     0x2001'0efc      0x34  pid.o [6]
-    .bss               zero     0x2001'0f30      0x34  pid.o [6]
-    .bss               zero     0x2001'0f64      0x40  zf_common_debug.o [7]
-    .bss               zero     0x2001'0fa4      0x18  zf_common_debug.o [7]
-    .bss               zero     0x2001'0fbc      0x14  zf_common_debug.o [7]
-    .bss               zero     0x2001'0fd0       0x4  zf_common_interrupt.o [7]
-    .bss               zero     0x2001'0fd4      0x18  zf_device_camera.o [8]
-    .bss               zero     0x2001'0fec       0x8  zf_device_camera.o [8]
-    .bss               zero     0x2001'0ff4       0x4  zf_device_mt9v03x.o [8]
-    .bss               zero     0x2001'0ff8      0x38  zf_driver_csi.o [9]
-    .bss               zero     0x2001'1030     0x200  zf_driver_flash.o [9]
-    .bss               zero     0x2001'1230       0x4  zf_driver_romapi.o [9]
-    .bss               zero     0x2001'1234       0xc  zf_driver_spi.o [9]
-    .bss               zero     0x2001'1240      0x10  zf_driver_usb_cdc.o [9]
-    .bss               zero     0x2001'1250      0x14  zf_device_config.o [14]
-    .bss               zero     0x2001'1264      0x10  zf_device_config.o [14]
+    .bss               zero     0x2001'0ef8      0x34  pid.o [6]
+    .bss               zero     0x2001'0f2c      0x34  pid.o [6]
+    .bss               zero     0x2001'0f60      0x40  zf_common_debug.o [7]
+    .bss               zero     0x2001'0fa0      0x18  zf_common_debug.o [7]
+    .bss               zero     0x2001'0fb8      0x14  zf_common_debug.o [7]
+    .bss               zero     0x2001'0fcc       0x4  zf_common_interrupt.o [7]
+    .bss               zero     0x2001'0fd0      0x18  zf_device_camera.o [8]
+    .bss               zero     0x2001'0fe8       0x8  zf_device_camera.o [8]
+    .bss               zero     0x2001'0ff0       0x4  zf_device_mt9v03x.o [8]
+    .bss               zero     0x2001'0ff4      0x38  zf_driver_csi.o [9]
+    .bss               zero     0x2001'102c     0x200  zf_driver_flash.o [9]
+    .bss               zero     0x2001'122c       0x4  zf_driver_romapi.o [9]
+    .bss               zero     0x2001'1230       0xc  zf_driver_spi.o [9]
+    .bss               zero     0x2001'123c      0x10  zf_driver_usb_cdc.o [9]
+    .bss               zero     0x2001'124c      0x14  zf_device_config.o [14]
+    .bss               zero     0x2001'1260      0x10  zf_device_config.o [14]
+    .bss               zero     0x2001'1270       0x4  zf_device_config.o [14]
     .bss               zero     0x2001'1274       0x4  zf_device_config.o [14]
-    .bss               zero     0x2001'1278       0x4  zf_device_config.o [14]
-    .bss               zero     0x2001'127c       0x2  isr.o [6]
-    .bss               zero     0x2001'127e       0x2  isr.o [6]
-    .bss               zero     0x2001'1280       0x2  zf_device_mt9v03x.o [8]
-    .bss               zero     0x2001'1282       0x1  zf_common_debug.o [7]
-    .bss               zero     0x2001'1283       0x1  zf_common_debug.o [7]
-    .bss               zero     0x2001'1284       0x1  zf_common_debug.o [7]
-    .bss               zero     0x2001'1285       0x1  zf_device_mt9v03x.o [8]
-    .bss               zero     0x2001'1286       0x1  zf_device_tft180.o [8]
-    .bss               zero     0x2001'1287       0x1  zf_device_type.o [8]
-    .bss               zero     0x2001'1288       0x1  zf_driver_pit.o [9]
-                              - 0x2001'128c  0x1'117c
+    .bss               zero     0x2001'1278       0x2  isr.o [6]
+    .bss               zero     0x2001'127a       0x2  isr.o [6]
+    .bss               zero     0x2001'127c       0x2  zf_device_mt9v03x.o [8]
+    .bss               zero     0x2001'127e       0x1  zf_common_debug.o [7]
+    .bss               zero     0x2001'127f       0x1  zf_common_debug.o [7]
+    .bss               zero     0x2001'1280       0x1  zf_common_debug.o [7]
+    .bss               zero     0x2001'1281       0x1  zf_device_mt9v03x.o [8]
+    .bss               zero     0x2001'1282       0x1  zf_device_tft180.o [8]
+    .bss               zero     0x2001'1283       0x1  zf_device_type.o [8]
+    .bss               zero     0x2001'1284       0x1  zf_driver_pit.o [9]
+                              - 0x2001'1288  0x1'1170
 
 "P7":                                          0x1000
   CSTACK                        0x2006'f000    0x1000  <Block>
@@ -392,7 +392,7 @@ No sections matched the following patterns:
   .intvec              ro code  0x7000'2400      0x40  vector_table_M.o [12]
                               - 0x7000'2440     0x440
 
-"P1":                                          0x9c23
+"P1":                                          0x9c2b
   .text                ro code  0x7000'2440     0x1f8  lz77_init.o [12]
   .text                ro code  0x7000'2638       0x6  abort.o [10]
   .text                ro code  0x7000'2640      0x14  exit.o [13]
@@ -411,8 +411,8 @@ No sections matched the following patterns:
   .rodata              const    0x7000'290c       0x0  zero_init3.o [12]
   .rodata              const    0x7000'290c       0x0  lz77_init.o [12]
   Initializer bytes    const    0x7000'290c    0x9692  <for rw-1>
-  Initializer bytes    const    0x7000'bf9e      0xc5  <for P3-P5|P9 s0>
-                              - 0x7000'c063    0x9c23
+  Initializer bytes    const    0x7000'bf9e      0xcd  <for P3-P5|P9 s0>
+                              - 0x7000'c06b    0x9c2b
 
 "P2|P11":                                      0xee56
   RW                            0x8000'0400    0xee56  <Block>
@@ -773,9 +773,9 @@ Unused ranges:
 
          From           To        Size
          ----           --        ----
-  0x2000'010d  0x2000'010f         0x3
-  0x2001'128c  0x2006'efff    0x5'dd74
-  0x7000'c063  0x703f'ffff   0x3f'3f9d
+  0x2000'0111  0x2000'0117         0x7
+  0x2001'1288  0x2006'efff    0x5'dd78
+  0x7000'c06b  0x703f'ffff   0x3f'3f95
   0x8000'0000  0x8000'03ff       0x400
   0x8000'f256  0x81df'ffff  0x1df'0daa
 
@@ -787,9 +787,9 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    2 destination ranges, total size 0x1'1149:
+    2 destination ranges, total size 0x1'1145:
           0x2000'0140  0xb060
-          0x2000'b1a0  0x60e9
+          0x2000'b1a0  0x60e5
 
 Copy/lz77 (__iar_lz77_init3)
     1 source range, total size 0x9692 (63% of destination):
@@ -798,10 +798,10 @@ Copy/lz77 (__iar_lz77_init3)
           0x8000'0400  0xee56
 
 Copy/lz77 (__iar_lz77_init3)
-    1 source range, total size 0xc5 (73% of destination):
-          0x7000'bf9e    0xc5
-    1 destination range, total size 0x10d:
-          0x2000'0000   0x10d
+    1 source range, total size 0xcd (75% of destination):
+          0x7000'bf9e    0xcd
+    1 destination range, total size 0x111:
+          0x2000'0000   0x111
 
 
 
@@ -867,35 +867,35 @@ C:\Users\Enterprise\OneDrive\university\competition\camera_example\demo\iar\prog
     img_process.o                                  1'238      782
     isr.o                                            844      535        4
     main.o                                           668      445   23'468
-    pid.o                                            358      237      136
+    pid.o                                            358      241      136
     ----------------------------------------------------------------------
-    Total:                                         3'108    1'999   23'608
+    Total:                                         3'108    2'003   23'608
 
 C:\Users\Enterprise\OneDrive\university\competition\camera_example\demo\iar\program\nor_sdram_zf_dtcm\Obj\zf_common_1201165462030747823.dir: [7]
     zf_common_clock.o                                 32       23        4
-    zf_common_debug.o                              1'344      926      232
+    zf_common_debug.o                              1'344      925      232
     zf_common_fifo.o                               1'388      942      104
     zf_common_font.o                                        1'309    2'072
     zf_common_function.o                             560      423      108
     zf_common_interrupt.o                            196      124        4
     zf_common_vector.o                               576    1'388
     ----------------------------------------------------------------------
-    Total:                                         4'096    5'135    2'524
+    Total:                                         4'096    5'134    2'524
 
 C:\Users\Enterprise\OneDrive\university\competition\camera_example\demo\iar\program\nor_sdram_zf_dtcm\Obj\zf_device_6570275422786408770.dir: [8]
     zf_device_camera.o                                28       17       32
-    zf_device_mt9v03x.o                              952      760   45'368
+    zf_device_mt9v03x.o                              952      763   45'368
     zf_device_tft180.o                             3'256    2'131      116
     zf_device_type.o                                  44       40       17
     ----------------------------------------------------------------------
-    Total:                                         4'280    2'948   45'533
+    Total:                                         4'280    2'951   45'533
 
 C:\Users\Enterprise\OneDrive\university\competition\camera_example\demo\iar\program\nor_sdram_zf_dtcm\Obj\zf_driver_11922370083829174090.dir: [9]
     zf_driver_csi.o                                1'144      867      284
     zf_driver_delay.o                                200      215      140
-    zf_driver_encoder.o                            1'444      994      128
+    zf_driver_encoder.o                            1'444      995      128
     zf_driver_flash.o                                 48       33      516
-    zf_driver_gpio.o                                 740      571      156
+    zf_driver_gpio.o                                 740      572      156
     zf_driver_pit.o                                  400      330      125
     zf_driver_pwm.o                                2'316    1'545      124
     zf_driver_romapi.o                                48       30        4
@@ -904,7 +904,7 @@ C:\Users\Enterprise\OneDrive\university\competition\camera_example\demo\iar\prog
     zf_driver_uart.o                               1'484    1'030      140
     zf_driver_usb_cdc.o                               32       21       16
     ----------------------------------------------------------------------
-    Total:                                        11'932    8'438    2'001
+    Total:                                        11'932    8'440    2'001
 
 dl7M_tlf.a: [10]
     abort.o                                   6
@@ -957,7 +957,7 @@ zf_device_config.a: [14]
     Gaps                                      6       20        2       32
     Linker created                           16        8       85    4'096
 --------------------------------------------------------------------------
-    Grand Total:                          1'210   51'912   41'449   83'428
+    Grand Total:                          1'210   51'912   41'457   83'428
 
 
 *******************************************************************************
@@ -1491,7 +1491,7 @@ SPDIF_IRQHandler        0x8000'f005     0x8  Code  Wk  zf_common_vector.o [7]
 SRC_IRQHandler          0x8000'f059     0x2  Code  Wk  zf_common_vector.o [7]
 SVC_Handler             0x8000'eed7     0x2  Code  Gb  zf_common_vector.o [7]
 SysTick_Handler         0x8000'7e13     0x2  Code  Gb  isr.o [6]
-SystemCoreClock         0x2000'00e8     0x4  Data  Gb  system_MIMXRT1064.o [4]
+SystemCoreClock         0x2000'00ec     0x4  Data  Gb  system_MIMXRT1064.o [4]
 SystemInit              0x7000'2655    0xe4  Code  Gb  system_MIMXRT1064.o [4]
 SystemInitHook          0x7000'2779     0x2  Code  Wk  system_MIMXRT1064.o [4]
 TEMP_LOW_HIGH_IRQHandler
@@ -1541,7 +1541,7 @@ XBAR1_IRQ_0_1_IRQHandler
 XBAR1_IRQ_2_3_IRQHandler
                         0x8000'f09f     0x2  Code  Wk  zf_common_vector.o [7]
 ZI$$Base                0x2000'b1a0           --   Gb  - Linker created -
-ZI$$Limit               0x2001'128c           --   Gb  - Linker created -
+ZI$$Limit               0x2001'1288           --   Gb  - Linker created -
 _PrintfTiny             0x8000'f133   0x124  Code  Gb  xprintftiny.o [10]
 _SDK_AtomicLocalClearAndSet4Byte
                         0x8000'2a35    0x18  Code  Lc  clock_config.o [4]
@@ -1619,42 +1619,42 @@ ascii_font_8x16         0x8000'190c   0x5f0  Data  Gb  zf_common_font.o [7]
 auxiliary_process       0x8000'7ae1   0x2e2  Code  Gb  img_process.o [6]
 binaryzation_process    0x8000'78ed    0x38  Code  Gb  img_process.o [6]
 camera_fifo_init        0x8000'9a1d    0x10  Code  Gb  zf_device_camera.o [8]
-camera_receiver_buffer  0x2001'0fec     0x8  Data  Gb  zf_device_camera.o [8]
-camera_receiver_fifo    0x2001'0fd4    0x18  Data  Gb  zf_device_camera.o [8]
-camera_type             0x2001'1287     0x1  Data  Gb  zf_device_type.o [8]
-camera_uart_handler     0x2000'00f0     0x4  Data  Gb  zf_device_type.o [8]
+camera_receiver_buffer  0x2001'0fe8     0x8  Data  Gb  zf_device_camera.o [8]
+camera_receiver_fifo    0x2001'0fd0    0x18  Data  Gb  zf_device_camera.o [8]
+camera_type             0x2001'1283     0x1  Data  Gb  zf_device_type.o [8]
+camera_uart_handler     0x2000'00f4     0x4  Data  Gb  zf_device_type.o [8]
 clock_init              0x8000'8c5d    0x20  Code  Gb  zf_common_clock.o [7]
-config                  0x2001'1030   0x200  Data  Gb  zf_driver_flash.o [9]
+config                  0x2001'102c   0x200  Data  Gb  zf_driver_flash.o [9]
 constrain_float         0x8000'84f1    0x22  Code  Gb  pid.o [6]
 csi_add_empty_buffer    0x8000'acfb    0x12  Code  Gb  zf_driver_csi.o [9]
 csi_get_full_buffer     0x8000'ad0d    0x1c  Code  Gb  zf_driver_csi.o [9]
-csi_handle              0x2001'0ff8    0x38  Data  Gb  zf_driver_csi.o [9]
+csi_handle              0x2001'0ff4    0x38  Data  Gb  zf_driver_csi.o [9]
 csi_init                0x8000'ad37   0x15e  Code  Gb  zf_driver_csi.o [9]
 csi_iomuxc              0x8000'aba3   0x158  Code  Gb  zf_driver_csi.o [9]
 csi_start               0x8000'ad29     0xe  Code  Gb  zf_driver_csi.o [9]
 dcd_data                0x7000'1030   0x410  Data  Gb  evkmimxrt1064_sdram_ini_dcd.o [4]
 debug_assert_handler    0x8000'908f    0x46  Code  Gb  zf_common_debug.o [7]
 debug_assert_handler{1}{2}::assert_nest_index
-                        0x2001'1284     0x1  Data  Lc  zf_common_debug.o [7]
+                        0x2001'1280     0x1  Data  Lc  zf_common_debug.o [7]
 debug_delay             0x8000'8c7d    0x38  Code  Lc  zf_common_debug.o [7]
 debug_init              0x8000'9147    0x3a  Code  Gb  zf_common_debug.o [7]
 debug_interrupr_handler
                         0x8000'906f    0x20  Code  Gb  zf_common_debug.o [7]
 debug_log_handler       0x8000'90d5    0x28  Code  Gb  zf_common_debug.o [7]
 debug_output            0x8000'8d67   0x308  Code  Lc  zf_common_debug.o [7]
-debug_output_info       0x2001'0fbc    0x14  Data  Lc  zf_common_debug.o [7]
+debug_output_info       0x2001'0fb8    0x14  Data  Lc  zf_common_debug.o [7]
 debug_output_init       0x8000'911d    0x2a  Code  Gb  zf_common_debug.o [7]
 debug_output_struct_init
                         0x8000'90fd    0x20  Code  Gb  zf_common_debug.o [7]
 debug_protective_handler
                         0x8000'8cb5    0xa4  Code  Lc  zf_common_debug.o [7]
-debug_uart_buffer       0x2001'0f64    0x40  Data  Gb  zf_common_debug.o [7]
-debug_uart_data         0x2001'1282     0x1  Data  Gb  zf_common_debug.o [7]
-debug_uart_fifo         0x2001'0fa4    0x18  Data  Gb  zf_common_debug.o [7]
+debug_uart_buffer       0x2001'0f60    0x40  Data  Gb  zf_common_debug.o [7]
+debug_uart_data         0x2001'127e     0x1  Data  Gb  zf_common_debug.o [7]
+debug_uart_fifo         0x2001'0fa0    0x18  Data  Gb  zf_common_debug.o [7]
 debug_uart_str_output   0x8000'8d59     0xe  Code  Lc  zf_common_debug.o [7]
 encoder_clear_count     0x8000'b3c9    0x2e  Code  Gb  zf_driver_encoder.o [9]
-encoder_data_1          0x2001'127c     0x2  Data  Gb  isr.o [6]
-encoder_data_2          0x2001'127e     0x2  Data  Gb  isr.o [6]
+encoder_data_1          0x2001'1278     0x2  Data  Gb  isr.o [6]
+encoder_data_2          0x2001'127a     0x2  Data  Gb  isr.o [6]
 encoder_get_count       0x8000'b399    0x30  Code  Gb  zf_driver_encoder.o [9]
 encoder_quad_init       0x8000'b3f7    0xfa  Code  Gb  zf_driver_encoder.o [9]
 exit                    0x8000'f117     0x4  Code  Gb  exit.o [10]
@@ -1667,11 +1667,11 @@ fifo_used               0x8000'928d    0x22  Code  Gb  zf_common_fifo.o [7]
 fifo_write_buffer       0x8000'9333   0x1d4  Code  Gb  zf_common_fifo.o [7]
 fifo_write_element      0x8000'92af    0x84  Code  Gb  zf_common_fifo.o [7]
 flash_init              0x8000'b5b9    0x22  Code  Gb  zf_driver_flash.o [9]
-flash_instance          0x2000'0100     0x4  Data  Gb  zf_driver_flash.o [9]
+flash_instance          0x2000'0104     0x4  Data  Gb  zf_driver_flash.o [9]
 flexio_camera_uart_handler
-                        0x2000'00f8     0x4  Data  Gb  zf_device_type.o [8]
+                        0x2000'00fc     0x4  Data  Gb  zf_device_type.o [8]
 flexio_camera_vsync_handler
-                        0x2000'00f4     0x4  Data  Gb  zf_device_type.o [8]
+                        0x2000'00f8     0x4  Data  Gb  zf_device_type.o [8]
 frexp                   0x8000'ed49          Code  Gb  frexp.o [11]
 frexpl                  0x8000'ed49          Code  Gb  frexp.o [11]
 func_double_to_str      0x8000'97b1   0x19a  Code  Gb  zf_common_function.o [7]
@@ -1696,7 +1696,7 @@ interrupt_global_disable
 interrupt_global_enable
                         0x8000'99c7    0x1a  Code  Gb  zf_common_interrupt.o [7]
 interrupt_init          0x8000'9a13     0xa  Code  Gb  zf_common_interrupt.o [7]
-interrupt_nest_count    0x2001'0fd0     0x4  Data  Lc  zf_common_interrupt.o [7]
+interrupt_nest_count    0x2001'0fcc     0x4  Data  Lc  zf_common_interrupt.o [7]
 ldexp                   0x8000'edc5          Code  Gb  ldexp.o [11]
 ldexpl                  0x8000'edc5          Code  Gb  ldexp.o [11]
 left_line               0x2001'0d84    0x78  Data  Gb  main.o [6]
@@ -1707,35 +1707,35 @@ main                    0x8000'81ad   0x1aa  Code  Gb  main.o [6]
 mid_line                0x2001'0dfc    0x78  Data  Gb  main.o [6]
 modf                    0x8000'e45d          Code  Gb  modf.o [11]
 modfl                   0x8000'e45d          Code  Gb  modf.o [11]
-mt9v03x_finish_flag     0x2001'1285     0x1  Data  Gb  zf_device_mt9v03x.o [8]
+mt9v03x_finish_flag     0x2001'1281     0x1  Data  Gb  zf_device_mt9v03x.o [8]
 mt9v03x_finished_callback
                         0x8000'9c55    0x4e  Code  Gb  zf_device_mt9v03x.o [8]
 mt9v03x_get_config      0x8000'9ae7    0xce  Code  Lc  zf_device_mt9v03x.o [8]
 mt9v03x_get_confing_buffer
                         0x2000'0054    0x24  Data  Lc  zf_device_mt9v03x.o [8]
 mt9v03x_get_version     0x8000'9bb5    0x76  Code  Gb  zf_device_mt9v03x.o [8]
-mt9v03x_h_blank         0x2001'1278     0x4  Data  Lc  zf_device_config.o [14]
-mt9v03x_iic_inf_struct  0x2001'1264    0x10  Data  Lc  zf_device_config.o [14]
-mt9v03x_image           0x2001'0ff4     0x4  Data  Gb  zf_device_mt9v03x.o [8]
+mt9v03x_h_blank         0x2001'1274     0x4  Data  Lc  zf_device_config.o [14]
+mt9v03x_iic_inf_struct  0x2001'1260    0x10  Data  Lc  zf_device_config.o [14]
+mt9v03x_image           0x2001'0ff0     0x4  Data  Gb  zf_device_mt9v03x.o [8]
 mt9v03x_image1          0x2000'0140  0x5820  Data  Gb  zf_device_mt9v03x.o [8]
 mt9v03x_image2          0x2000'5980  0x5820  Data  Gb  zf_device_mt9v03x.o [8]
 mt9v03x_init            0x8000'9ca3   0x10e  Code  Gb  zf_device_mt9v03x.o [8]
-mt9v03x_init_config     0x2001'1250    0x14  Data  Lc  zf_device_config.o [14]
+mt9v03x_init_config     0x2001'124c    0x14  Data  Lc  zf_device_config.o [14]
 mt9v03x_read_word_sccb  0x8000'd99b    0x28  Code  Lc  zf_device_config.o [14]
 mt9v03x_set_config      0x8000'9a39    0xae  Code  Lc  zf_device_mt9v03x.o [8]
 mt9v03x_set_config_sccb
                         0x8000'd9c3   0x646  Code  Gb  zf_device_config.o [14]
 mt9v03x_set_confing_buffer
                         0x2000'002c    0x28  Data  Lc  zf_device_mt9v03x.o [8]
-mt9v03x_type            0x2000'0109     0x1  Data  Lc  zf_device_mt9v03x.o [8]
+mt9v03x_type            0x2000'010d     0x1  Data  Lc  zf_device_mt9v03x.o [8]
 mt9v03x_uart_callback   0x8000'9c2b    0x2a  Code  Lc  zf_device_mt9v03x.o [8]
-mt9v03x_v_blank         0x2001'1274     0x4  Data  Lc  zf_device_config.o [14]
-mt9v03x_version         0x2001'1280     0x2  Data  Lc  zf_device_mt9v03x.o [8]
+mt9v03x_v_blank         0x2001'1270     0x4  Data  Lc  zf_device_config.o [14]
+mt9v03x_version         0x2001'127c     0x2  Data  Lc  zf_device_mt9v03x.o [8]
 mt9v03x_write_word_sccb
                         0x8000'd971    0x2a  Code  Lc  zf_device_config.o [14]
 out                     0x8000'f11b    0x18  Code  Lc  xprintftiny.o [10]
 pit_init                0x8000'b9db    0x68  Code  Gb  zf_driver_pit.o [9]
-pit_init::init_flag     0x2001'1288     0x1  Data  Lc  zf_driver_pit.o [9]
+pit_init::init_flag     0x2001'1284     0x1  Data  Lc  zf_driver_pit.o [9]
 pow                     0x8000'e4fd   0x4c0  Code  Gb  pow64.o [11]
 powl                    0x8000'e4fd   0x4c0  Code  Gb  pow64.o [11]
 pwm_init                0x8000'c005   0x222  Code  Gb  zf_driver_pwm.o [9]
@@ -1745,14 +1745,14 @@ qspiflash_config        0x7000'0000   0x200  Data  Gb  evkmimxrt1064_flexspi_nor
 qtimer_index            0x2000'009c    0x14  Data  Gb  zf_driver_encoder.o [9]
 qtimer_iomuxc           0x8000'b045   0x354  Code  Gb  zf_driver_encoder.o [9]
 right_line              0x2001'0e74    0x78  Data  Gb  main.o [6]
-rom_api_entry           0x2001'1230     0x4  Data  Lc  zf_driver_romapi.o [9]
+rom_api_entry           0x2001'122c     0x4  Data  Lc  zf_driver_romapi.o [9]
 rom_api_flexspi_nor_get_config
                         0x8000'c377    0x1a  Code  Gb  zf_driver_romapi.o [9]
 rom_api_init            0x8000'c369     0xe  Code  Gb  zf_driver_romapi.o [9]
 s_EDMAHandle            0x2000'b1c4    0x80  Data  Lc  fsl_edma.o [5]
 s_ENETHandle            0x2000'b244     0x8  Data  Lc  fsl_enet.o [5]
 s_baudratePrescaler     0x8000'1160     0x8  Data  Lc  fsl_lpspi.o [5]
-s_cdcVcom               0x2001'1240    0x10  Data  Gb  zf_driver_usb_cdc.o [9]
+s_cdcVcom               0x2001'123c    0x10  Data  Gb  zf_driver_usb_cdc.o [9]
 s_csiBases              0x8000'0a90     0x4  Data  Lc  fsl_csi.o [5]
 s_csiClocks             0x8000'eec6     0x2  Data  Lc  fsl_csi.o [5]
 s_csiHandle             0x2000'b1a8     0x4  Data  Lc  fsl_csi.o [5]
@@ -1820,17 +1820,17 @@ soft_iic_send_data      0x8000'c6af    0xe6  Code  Lc  zf_driver_soft_iic.o [9]
 soft_iic_start          0x8000'c3c5    0xa4  Code  Lc  zf_driver_soft_iic.o [9]
 soft_iic_stop           0x8000'c469    0xa4  Code  Lc  zf_driver_soft_iic.o [9]
 soft_iic_wait_ack       0x8000'c5db    0xd4  Code  Lc  zf_driver_soft_iic.o [9]
-speed_IMAX              0x2000'00dc     0x4  Data  Gb  pid.o [6]
-speed_KD                0x2001'0ef0     0x4  Data  Gb  pid.o [6]
-speed_KI                0x2001'0eec     0x4  Data  Gb  pid.o [6]
+speed_IMAX              0x2000'00e0     0x4  Data  Gb  pid.o [6]
+speed_KD                0x2001'0eec     0x4  Data  Gb  pid.o [6]
+speed_KI                0x2000'00dc     0x4  Data  Gb  pid.o [6]
 speed_KP                0x2000'00d8     0x4  Data  Gb  pid.o [6]
-speed_OUTMAX            0x2000'00e0     0x4  Data  Gb  pid.o [6]
-speed_pid_l             0x2001'0efc    0x34  Data  Gb  pid.o [6]
-speed_pid_r             0x2001'0f30    0x34  Data  Gb  pid.o [6]
-speed_pwm               0x2001'0ef8     0x4  Data  Gb  pid.o [6]
-speed_real              0x2001'0ef4     0x4  Data  Gb  pid.o [6]
-speed_target            0x2000'00e4     0x4  Data  Gb  pid.o [6]
-spi_cs_index            0x2001'1234     0xc  Data  Lc  zf_driver_spi.o [9]
+speed_OUTMAX            0x2000'00e4     0x4  Data  Gb  pid.o [6]
+speed_pid_l             0x2001'0ef8    0x34  Data  Gb  pid.o [6]
+speed_pid_r             0x2001'0f2c    0x34  Data  Gb  pid.o [6]
+speed_pwm               0x2001'0ef4     0x4  Data  Gb  pid.o [6]
+speed_real              0x2001'0ef0     0x4  Data  Gb  pid.o [6]
+speed_target            0x2000'00e8     0x4  Data  Gb  pid.o [6]
+spi_cs_index            0x2001'1230     0xc  Data  Lc  zf_driver_spi.o [9]
 spi_index               0x2000'00c4    0x14  Data  Lc  zf_driver_spi.o [9]
 spi_init                0x8000'd031   0x23c  Code  Gb  zf_driver_spi.o [9]
 spi_iomuxc              0x8000'cb07   0x430  Code  Gb  zf_driver_spi.o [9]
@@ -1840,16 +1840,16 @@ spi_write_8bit          0x8000'cfef    0x12  Code  Gb  zf_driver_spi.o [9]
 spi_write_8bit_array    0x8000'cfd3    0x1c  Code  Gb  zf_driver_spi.o [9]
 sprintf                 0x8000'ea45    0x40  Code  Gb  sprintf.o [10]
 strlen                  0x8000'ea0d          Code  Gb  strlen.o [12]
-system_clock            0x2000'00ec     0x4  Data  Gb  zf_common_clock.o [7]
+system_clock            0x2000'00f0     0x4  Data  Gb  zf_common_clock.o [7]
 system_delay_init       0x8000'afdd    0x2c  Code  Gb  zf_driver_delay.o [9]
 system_delay_ms         0x8000'af9f    0x3e  Code  Gb  zf_driver_delay.o [9]
-tft180_bgcolor          0x2000'0106     0x2  Data  Lc  zf_device_tft180.o [8]
+tft180_bgcolor          0x2000'010a     0x2  Data  Lc  zf_device_tft180.o [8]
 tft180_clear            0x8000'a009    0x50  Code  Gb  zf_device_tft180.o [8]
 tft180_debug_init       0x8000'9f9f    0x6a  Code  Lc  zf_device_tft180.o [8]
-tft180_display_dir      0x2001'1286     0x1  Data  Lc  zf_device_tft180.o [8]
-tft180_display_font     0x2000'010a     0x1  Data  Lc  zf_device_tft180.o [8]
+tft180_display_dir      0x2001'1282     0x1  Data  Lc  zf_device_tft180.o [8]
+tft180_display_font     0x2000'010e     0x1  Data  Lc  zf_device_tft180.o [8]
 tft180_init             0x8000'a71d   0x36a  Code  Gb  zf_device_tft180.o [8]
-tft180_pencolor         0x2000'0104     0x2  Data  Lc  zf_device_tft180.o [8]
+tft180_pencolor         0x2000'0108     0x2  Data  Lc  zf_device_tft180.o [8]
 tft180_set_color        0x8000'a095     0xe  Code  Gb  zf_device_tft180.o [8]
 tft180_set_dir          0x8000'a059    0x3c  Code  Gb  zf_device_tft180.o [8]
 tft180_set_region       0x8000'9e45   0x15a  Code  Gb  zf_device_tft180.o [8]
@@ -1859,8 +1859,8 @@ tft180_show_gray_image  0x8000'a595   0x16e  Code  Gb  zf_device_tft180.o [8]
 tft180_show_int         0x8000'a329    0xfc  Code  Gb  zf_device_tft180.o [8]
 tft180_show_string      0x8000'a279    0xb0  Code  Gb  zf_device_tft180.o [8]
 tft180_write_index      0x8000'9e1d    0x28  Code  Lc  zf_device_tft180.o [8]
-tft180_x_max            0x2000'010b     0x1  Data  Lc  zf_device_tft180.o [8]
-tft180_y_max            0x2000'010c     0x1  Data  Lc  zf_device_tft180.o [8]
+tft180_x_max            0x2000'010f     0x1  Data  Lc  zf_device_tft180.o [8]
+tft180_y_max            0x2000'0110     0x1  Data  Lc  zf_device_tft180.o [8]
 type_default_callback   0x8000'aaa9     0x2  Code  Gb  zf_device_type.o [8]
 uart_index              0x2000'0078    0x24  Data  Lc  zf_driver_uart.o [9]
 uart_init               0x8000'd7eb    0x8e  Code  Gb  zf_driver_uart.o [9]
@@ -1871,9 +1871,9 @@ uart_write_buffer       0x8000'd72d    0x2a  Code  Gb  zf_driver_uart.o [9]
 uart_write_byte         0x8000'd705    0x28  Code  Gb  zf_driver_uart.o [9]
 uart_write_string       0x8000'd757    0x22  Code  Gb  zf_driver_uart.o [9]
 wireless_module_uart_handler
-                        0x2000'00fc     0x4  Data  Gb  zf_device_type.o [8]
-zf_debug_assert_enable  0x2000'0108     0x1  Data  Lc  zf_common_debug.o [7]
-zf_debug_init_flag      0x2001'1283     0x1  Data  Lc  zf_common_debug.o [7]
+                        0x2000'0100     0x4  Data  Gb  zf_device_type.o [8]
+zf_debug_assert_enable  0x2000'010c     0x1  Data  Lc  zf_common_debug.o [7]
+zf_debug_init_flag      0x2001'127f     0x1  Data  Lc  zf_common_debug.o [7]
 
 
 [1] = C:\Users\Enterprise\OneDrive\university\competition\camera_example\demo\iar\program\nor_sdram_zf_dtcm\Obj\components_fatfs_6246014242642884545.dir
@@ -1893,7 +1893,7 @@ zf_debug_init_flag      0x2001'1283     0x1  Data  Lc  zf_common_debug.o [7]
 
    1'210 bytes of readonly  code memory
   51'912 bytes of readwrite code memory
-  41'449 bytes of readonly  data memory
+  41'457 bytes of readonly  data memory
   83'428 bytes of readwrite data memory
 
 Errors: none
