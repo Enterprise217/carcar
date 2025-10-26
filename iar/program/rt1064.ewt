@@ -2085,6 +2085,9 @@
         <file>
             <name>$PROJ_DIR$\..\..\user\src\pid.c</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\user\src\speed.c</name>
+        </file>
     </group>
     <group>
         <name>user_h</name>
@@ -2114,6 +2117,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\user\inc\soft_timer.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\user\inc\speed.h</name>
         </file>
     </group>
     <group>

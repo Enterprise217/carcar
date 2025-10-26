@@ -59,26 +59,47 @@ void PIT_IRQHandler(void)
 {
     if (pit_flag_get(PIT_CH0))
     {
-        // 获取编码器读数
-        encoder_data_1 = -encoder_get_count(ENCODER_1); // 获取编码器计数
-        encoder_clear_count(ENCODER_1);                // 清空编码器计数
-        encoder_data_2 = +encoder_get_count(ENCODER_2);
-        encoder_clear_count(ENCODER_2);
+        /* 使用 calculate_motor_speed() 计算滤波后的速度并在 PIT 回调中做 PID 更新 */
+    /* 读取计数并立即清零（职责：中断负责读/清），将增量交给速度计算模块 */
+    int16 left_cnt = encoder_get_count(ENCODER_1);
+    encoder_clear_count(ENCODER_1);
+    int16 right_cnt = encoder_get_count(ENCODER_2);
+    encoder_clear_count(ENCODER_2);
 
-        // 编码器值即为速度值
-        speed_real = encoder_data_1;
-        // PID更新 
-        speed_pwm = PidLocCtrl(&speed_pid_l, speed_target - speed_real, 1.f);
-        // 只考虑一个方向转动
-        pwm_set_duty(MOTOR1_PWM, MAX(speed_pwm, 0));
-        gpio_set_level(MOTOR1_DIR, MOTOR1_FORWARD_DIR_LEVEL);
-        // 编码器值即为速度值
-        speed_real = encoder_data_2;
-        // PID更新 
-        speed_pwm = PidLocCtrl(&speed_pid_r, speed_target - speed_real, 1.f);
-        // 只考虑一个方向转动
-        pwm_set_duty(MOTOR2_PWM, MAX(speed_pwm, 0));
-        gpio_set_level(MOTOR2_DIR, MOTOR2_FORWARD_DIR_LEVEL);
+    float s_left = 0.0f, s_right = 0.0f;
+    /* 传入的是本采样周期内的增量脉冲数 */
+    calculate_motor_speed(left_cnt, right_cnt, &s_left, &s_right);
+
+        /* 使用采样时间常量作为 PID 时间量（单位：秒） */
+        float pwm_l = PidLocCtrl(&speed_pid_l, speed_target - s_left, (float)SPEED_SAMPLE_TIME);
+        float pwm_r = PidLocCtrl(&speed_pid_r, speed_target - s_right, (float)SPEED_SAMPLE_TIME);
+
+        /* 保存便于调试显示（保留兼容变量） */
+        speed_real = (int16)((s_left + s_right) * 0.5f);
+        speed_pwm = (pwm_l + pwm_r) * 0.5f;
+
+        /* 根据 pwm 符号设置方向并写入占空比 */
+        if (pwm_l >= 0.0f)
+        {
+            gpio_set_level(MOTOR1_DIR, MOTOR1_FORWARD_DIR_LEVEL);
+            pwm_set_duty(MOTOR1_PWM, pwm_l);
+        }
+        else
+        {
+            gpio_set_level(MOTOR1_DIR, !MOTOR1_FORWARD_DIR_LEVEL);
+            pwm_set_duty(MOTOR1_PWM, -pwm_l);
+        }
+
+        if (pwm_r >= 0.0f)
+        {
+            gpio_set_level(MOTOR2_DIR, MOTOR2_FORWARD_DIR_LEVEL);
+            pwm_set_duty(MOTOR2_PWM, pwm_r);
+        }
+        else
+        {
+            gpio_set_level(MOTOR2_DIR, !MOTOR2_FORWARD_DIR_LEVEL);
+            pwm_set_duty(MOTOR2_PWM, -pwm_r);
+        }
 
         pit_flag_clear(PIT_CH0);
     }

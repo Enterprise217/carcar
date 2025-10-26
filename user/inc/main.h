@@ -1,5 +1,22 @@
+#ifndef __MAIN_H__
+#define __MAIN_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "zf_common_headfile.h"
 #include "img_process.h"
+#include "speed.h"
+
+// 编码器参数（需要根据实际情况设置）
+#define ENCODER_PULSES_PER_REV    (8192)      // 编码器每圈脉冲数，需要根据实际编码器设置
+#define WHEEL_CIRCUMFERENCE       (20.0f)    // 轮子周长，单位：cm（根据实际轮子测量）
+#define SPEED_SAMPLE_TIME         (0.01f)    // 速度采样时间，10ms
+#define SPEED_TARGET_LEFT       (10.0f)    // 左轮目标速度，单位：cm/s
+#define SPEED_TARGET_RIGHT      (10.0f)    // 右轮目标速度，单位：cm/s
+
+
 
 // 编码器引脚信息
 // 请确保两轮编码器前进时回传值都为正数，若回传为负请isr.c中encoder_get_count前修改正负号
@@ -48,5 +65,11 @@
 #define SERVO_MOTOR_DUTY(x) ((float)PWM_DUTY_MAX / (1000.0 / (float)SERVO_MOTOR_FREQ) * (0.5 + (float)(x) / 90.0))
 
 #if (SERVO_MOTOR_FREQ < 50 || SERVO_MOTOR_FREQ > 300)
-#error "SERVO_MOTOR_FREQ ERROE!"
+#error "SERVO_MOTOR_FREQ ERROR!"
 #endif
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __MAIN_H__ */

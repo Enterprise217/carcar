@@ -1,4 +1,5 @@
 #include "main.h" // 所有引脚信息更改在main.h里改宏
+#
 
 // *************************** 例程硬件连接说明 ***************************
 /*
@@ -29,6 +30,15 @@
 
 // 舵机动作角度中值
 const float servo_motor_duty_middle = (SERVO_MOTOR_R_MAX + SERVO_MOTOR_L_MAX) / 2.f; 
+
+// 速度计算相关全局变量
+float speed_left = 0.0f;           // 左轮速度 cm/s
+float speed_right = 0.0f;          // 右轮速度 cm/s
+float speed_target = 30.0f;        // 目标速度 cm/s
+
+// PID控制相关
+float motor_pwm_left = 0.0f;       // 左轮PWM输出
+float motor_pwm_right = 0.0f;      // 右轮PWM输出
 
 void Init()
 {
@@ -83,6 +93,20 @@ int main(void)
     system_delay_ms(300);          // 等待主板其他外设上电完成
 
     Init();
+
+    /*
+     * 选择驱动模式：
+     * - 如果想使用 PIT+PID 闭环匀速，请确保 pit_ms_init 已启用（Init() 中已调用）并且 PID 参数已调好，
+     *   然后设置 speed_target（单位：cm/s），ISR 会自动计算速度并更新 PWM。
+     * - 如果想临时做开环 PWM 测试（不使用 PID），在下面启用 MOTOR_OPEN_LOOP_TEST 宏：
+     *   宏启用后会调用 motors_set_all_duty() 将电机以固定占空比驱动。
+     */
+
+#ifdef MOTOR_OPEN_LOOP_TEST
+    /* 开环测试：直接设置占空比（百分比 -100..100） */
+    motors_set_all_duty(40.0f); /* 例如 40% 正向 */
+#endif
+
     interrupt_global_enable(0);
 
     while (1)
