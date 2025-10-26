@@ -12,24 +12,24 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <PlDriver>
-        <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\config\debugger\NXP\MIMXRT1064xxx6A.ddf</MemConfigValue>
         <FirstRun>0</FirstRun>
+        <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.2\arm\config\debugger\NXP\MIMXRT1064xxx6A.ddf</MemConfigValue>
     </PlDriver>
     <Jet>
+        <JetConnSerialNo>SEEKFREE CMSIS-DAP V1:SF-3184176013204</JetConnSerialNo>
+        <JetConnFoundProbes>SEEKFREE CMSIS-DAP V1:SF-3184176013204:SEEKFREE CMSIS-DAP V2:SF-3184176013204:</JetConnFoundProbes>
+        <PrevWtdReset>System</PrevWtdReset>
         <DisableInterrupts>0</DisableInterrupts>
         <LeaveRunning>1</LeaveRunning>
         <MultiCoreRunAll>0</MultiCoreRunAll>
         <OnlineReset>System</OnlineReset>
-        <JetConnSerialNo>SEEKFREE CMSIS-DAP V1:SF-3184176013204</JetConnSerialNo>
-        <JetConnFoundProbes>SEEKFREE CMSIS-DAP V1:SF-3184176013204:SEEKFREE CMSIS-DAP V2:SF-3184176013204:</JetConnFoundProbes>
-        <PrevWtdReset>System</PrevWtdReset>
     </Jet>
     <ArmDriver>
         <EnableCache>1</EnableCache>
         <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
     <DebugChecksum>
-        <Checksum>1822311117</Checksum>
+        <Checksum>2610451122</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -45,8 +45,8 @@
     <SWOManager>
         <SamplingDivider>8192</SamplingDivider>
         <OverrideClock>0</OverrideClock>
-        <CpuClock>172052037</CpuClock>
-        <SwoClock>1684104530</SwoClock>
+        <CpuClock>4282149472</CpuClock>
+        <SwoClock>572</SwoClock>
         <DataLogMode>0</DataLogMode>
         <ItmPortsEnabled>63</ItmPortsEnabled>
         <ItmTermIOPorts>1</ItmTermIOPorts>
@@ -179,12 +179,12 @@
     <Breakpoints2>
         <Count>0</Count>
     </Breakpoints2>
-    <Aliases>
-        <Count>0</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
+    <Aliases>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
 </settings>
